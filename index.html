@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas para Guadalupe 💛</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fffef0',
+                            100: '#fffbca',
+                            200: '#fff591',
+                            300: '#ffe84d',
+                            400: '#ffd710',
+                            500: '#f5bd00',
+                            600: '#d49400',
+                            700: '#a86a00',
+                            800: '#875108',
+                        }
+                    },
+                    fontFamily: {
+                        vibes: ['"Great Vibes"', 'cursive'],
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['"Poppins"', 'sans-serif'],
+                        caveat: ['"Caveat"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-br from-amber-950 via-amber-900 to-amber-950 min-h-full text-gray-800 font-poppins relative overflow-x-hidden">
+
+    <!-- Canvas para lluvia continua de flores y corazones -->
+    <canvas id="rainCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+    <!-- Encabezado -->
+    <header class="relative z-20 max-w-6xl mx-auto px-4 pt-6 pb-2 flex justify-center items-center">
+        <div class="flex items-center space-x-2.5 bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full shadow-md border border-gold-300">
+            <span class="text-gold-600 text-sm"><i class="fa-solid fa-sun animate-spin-slow"></i></span>
+            <span class="text-xs md:text-sm font-semibold tracking-wide text-gold-700 uppercase">Jardín Planetario • Guadalupe</span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 py-6 space-y-8">
+
+        <!-- Título -->
+        <div class="text-center space-y-2 max-w-2xl mx-auto">
+            <span class="font-vibes text-3xl md:text-5xl text-gold-300 block drop-shadow-md">Con todo mi amor eterno...</span>
+            <h1 class="font-playfair text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+                Para el Amor de Mi Vida: <span class="text-gold-400 underline decoration-gold-300 decoration-wavy">Guadalupe</span>
+            </h1>
+            <p class="font-caveat text-3xl text-gold-200 font-semibold pt-1">
+                Para mi amada Guadalupe 💛
+            </p>
+            <p class="text-xs md:text-sm text-gold-100/90 pt-2 bg-black/40 backdrop-blur-md px-5 py-2 rounded-full inline-block border border-gold-400/30 shadow-lg">
+                ✨ Toca cualquier flor para verla girar y descubrir su mensaje de amor ✨
+            </p>
+        </div>
+
+        <!-- Galería 3D de Flores Planetarias -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 perspective-container pt-4">
+
+            <!-- Flor 1: Girasol Dorado -->
+            <div onclick="spinAndShowMessage(this, 0, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-300/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 100)">
+                            <g fill="#ffd710">
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(30)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(60)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(90)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(120)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(150)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(180)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(210)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(240)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(270)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(300)"/>
+                                <path d="M0,0 L-10,-60 Q0,-75 10,-60 Z" transform="rotate(330)"/>
+                            </g>
+                            <circle cx="0" cy="0" r="26" fill="#361a04"/>
+                            <circle cx="0" cy="0" r="22" fill="none" stroke="#ffe84d" stroke-width="2" stroke-dasharray="4 2"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Planeta Girasol</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Girasol Dorado</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+            <!-- Flor 2: Rosa Imperial -->
+            <div onclick="spinAndShowMessage(this, 1, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-300/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 100)">
+                            <path d="M -10 30 Q 0 80 10 90" stroke="#4d7c0f" stroke-width="6" fill="none"/>
+                            <circle cx="0" cy="0" r="45" fill="#f5bd00"/>
+                            <circle cx="-10" cy="-10" r="32" fill="#ffd710"/>
+                            <circle cx="10" cy="-5" r="24" fill="#fff591"/>
+                            <path d="M -15 -15 Q 0 -35 15 -15 Q 25 15 0 25 Q -25 15 -15 -15 Z" fill="#ffb300"/>
+                            <path d="M -5 -5 Q 0 -18 5 -5 Q 10 5 0 10 Q -10 5 -5 -5 Z" fill="#d49400"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Astro Rosa</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Rosa Imperial Amarilla</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+            <!-- Flor 3: Tulipán Primavera -->
+            <div onclick="spinAndShowMessage(this, 2, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-yellow-300/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 90)">
+                            <path d="M0 40 Q 0 85 -5 95" stroke="#4d7c0f" stroke-width="6" fill="none"/>
+                            <path d="M-35 -30 Q -50 20 0 45 Q 50 20 35 -30 Q 15 -10 0 -35 Q -15 -10 -35 -30 Z" fill="#ffd710"/>
+                            <path d="M-20 -20 Q -35 15 0 35 Q 35 15 20 -20 Q 10 -5 0 -25 Q -10 -5 -20 -20 Z" fill="#ffe84d"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Órbita Tulipán</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Tulipán Primavera</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+            <!-- Flor 4: Orquídea del Sol -->
+            <div onclick="spinAndShowMessage(this, 3, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-400/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 100)">
+                            <path d="M 0 0 L -35 -40 Q 0 -60 35 -40 Z" fill="#fff591"/>
+                            <path d="M 0 0 L -55 -5 Q -40 30 -10 15 Z" fill="#ffd710"/>
+                            <path d="M 0 0 L 55 -5 Q 40 30 10 15 Z" fill="#ffd710"/>
+                            <path d="M 0 0 L -25 45 Q 0 60 25 45 Z" fill="#f5bd00"/>
+                            <circle cx="0" cy="0" r="12" fill="#d49400"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Constelación Orquídea</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Orquídea del Sol</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+            <!-- Flor 5: Margarita Radiante -->
+            <div onclick="spinAndShowMessage(this, 4, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-200/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 100)">
+                            <g fill="#fffbca">
+                                <ellipse cx="0" cy="-45" rx="9" ry="22"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(45)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(90)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(135)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(180)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(225)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(270)"/>
+                                <ellipse cx="0" cy="-45" rx="9" ry="22" transform="rotate(315)"/>
+                            </g>
+                            <circle cx="0" cy="0" r="22" fill="#ffd710"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Astro Margarita</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Margarita Radiante</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+            <!-- Flor 6: Lirio de Luz -->
+            <div onclick="spinAndShowMessage(this, 5, event)" class="flower-card cursor-pointer group glass-panel rounded-3xl p-6 text-center shadow-xl border border-gold-300/80 transition-all hover:border-gold-400 flex flex-col items-center justify-between relative overflow-hidden">
+                <div class="flower-planet w-full aspect-square flex items-center justify-center p-2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-300/20 to-transparent rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg viewBox="0 0 200 200" class="w-40 h-40 drop-shadow-xl">
+                        <g transform="translate(100, 100)">
+                            <g fill="#ffe84d">
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z"/>
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z" transform="rotate(60)"/>
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z" transform="rotate(120)"/>
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z" transform="rotate(180)"/>
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z" transform="rotate(240)"/>
+                                <path d="M0,0 Q-30,-60 0,-80 Q30,-60 0,0 Z" transform="rotate(300)"/>
+                            </g>
+                            <circle cx="0" cy="0" r="14" fill="#875108"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="mt-3">
+                    <span class="text-xs font-semibold text-gold-700 bg-gold-100 px-3 py-1 rounded-full uppercase tracking-wider">Galaxia Lirio</span>
+                    <h3 class="font-playfair text-xl font-bold text-gray-900 mt-1">Lirio de Luz</h3>
+                    <p class="text-xs text-gold-600 font-medium mt-1">✨ Toca para hacer girar</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carta de Amor -->
+        <div class="glass-panel rounded-3xl p-6 md:p-8 shadow-2xl border border-gold-300 mt-8">
+            <div class="flex items-center justify-between border-b border-gold-200 pb-4 mb-4">
+                <div class="flex items-center space-x-2.5">
+                    <i class="fa-solid fa-heart text-gold-600 text-2xl animate-pulse"></i>
+                    <h2 class="font-playfair text-xl md:text-2xl font-bold text-gray-900">Carta de Flores para ti, Guadalupe</h2>
+                </div>
+                <span class="text-xs text-gold-700 font-semibold bg-gold-100 px-3 py-1 rounded-full border border-gold-200">Flores Amarillas 💛</span>
+            </div>
+
+            <div class="text-gray-700 space-y-4 leading-relaxed font-poppins text-sm md:text-base">
+                <p class="font-semibold text-gold-700 text-lg">
+                    Querida Guadalupe,
+                </p>
+                <p>
+                    Cada flor amarilla de este jardín representa un destello de la alegría inmensa que trajiste a mi vida. Como un planeta girando en su órbita perfecta alrededor del sol, todo mi universo encuentra su centro y su luz en ti.
+                </p>
+                <p class="italic text-gray-800 bg-gold-100/70 p-4 rounded-xl border-l-4 border-gold-500 font-playfair shadow-sm">
+                    "En cada primavera y en cada instante de la vida, elegirte a ti, mi dulce Guadalupe, es y siempre será mi decisión más hermosa."
+                </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-gold-200 flex flex-wrap justify-between items-center gap-4">
+                <span class="font-vibes text-2xl md:text-3xl text-gold-700">Con todo mi amor, Tu Amor</span>
+                <button onclick="triggerLoveShower(event)" class="bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-600 hover:to-amber-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform active:scale-95 text-xs md:text-sm flex items-center space-x-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+                    <span>¡Explosión de Flores y Corazones!</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Notificación Flotante con Mensaje de Amor -->
+    <div id="loveToast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-500 max-w-md w-[90%]">
+        <div class="bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 text-white p-5 rounded-3xl shadow-2xl border-2 border-gold-200 flex items-center space-x-4 backdrop-blur-lg">
+            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center shrink-0 text-2xl text-gold-100">
+                <i class="fa-solid fa-heart-pulse animate-bounce"></i>
+            </div>
+            <div>
+                <span class="text-xs uppercase tracking-widest text-gold-100 font-bold">Mensaje para Guadalupe 💛</span>
+                <p id="loveToastMessage" class="font-playfair text-base md:text-lg font-bold text-white mt-0.5 leading-snug">
+                    "Eres mi luz de cada día, Guadalupe"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script ejecutable JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

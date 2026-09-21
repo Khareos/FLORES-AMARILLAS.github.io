@@ -1,0 +1,65 @@
+/* Contenedor con perspectiva 3D */
+
+.perspective-container {
+    perspective: 1200px;
+}
+
+
+/* Elemento del Planeta Flor */
+
+.flower-planet {
+    transform-style: preserve-3d;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s ease;
+}
+
+
+/* Clase activa activada por clic para la rotación 3D */
+
+.flower-planet.spin-orbit {
+    animation: planetarySpin 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+
+/* Animación de rotación planetaria */
+
+@keyframes planetarySpin {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    }
+    50% {
+        transform: rotateY(210deg) rotateX(18deg) scale(1.12) translateZ(30px);
+        filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.9));
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(0deg) scale(1);
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+    }
+}
+
+
+/* Estilo para los paneles Glassmorphism */
+
+.glass-panel {
+    background: rgba(255, 253, 245, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(184, 134, 11, 0.2);
+}
+
+
+/* Barra de desplazamiento personalizada */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fffdf0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f5bd00;
+    border-radius: 10px;
+}
