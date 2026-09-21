@@ -11,7 +11,7 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-// Arreglo de partículas
+// Símbolos de flores y corazones
 const particles = [];
 const symbols = ['🌻', '🌼', '💛', '❤️', '🌸', '💖', '✨', '⭐', '💕'];
 
@@ -66,11 +66,11 @@ class Particle {
     }
 }
 
-// Bucle continuo de renderizado a 60 FPS
+// Bucle continuo de animación a 60 FPS
 function animate() {
     ctx.clearRect(0, 0, width, height);
 
-    // Generación periódica de lluvia continua
+    // Generación constante de flores y corazones cayendo
     if (Math.random() < 0.4) {
         particles.push(new Particle());
     }
@@ -80,7 +80,6 @@ function animate() {
         p.update();
         p.draw();
 
-        // Elimina partículas fuera de la pantalla
         if (p.y > height + 40 || p.alpha <= 0) {
             particles.splice(i, 1);
         }
@@ -91,39 +90,42 @@ function animate() {
 
 animate();
 
-// Explosión de partículas en coordenadas específicas
+// Explosión de partículas
 function createBurstAt(x, y, count = 35) {
     for (let i = 0; i < count; i++) {
         particles.push(new Particle(x, y, true));
     }
 }
 
-// --- LÓGICA INTERACTIVA DE LAS FLORES Y MENSAJES PARA GUADALUPE ---
+// --- MENSAJES Y APERTURA DE TARJETAS PARA GUADALUPE ---
 const loveMessages = [
-    "✨ Eres mi luz de cada día, Guadalupe.",
-    "🌻 Contigo mi mundo siempre es primavera, Guadalupe.",
-    "💛 Mi lugar favorito en todo el universo es a tu lado, Guadalupe.",
-    "🌟 Tu sonrisa ilumina mi vida mucho más que mil soles.",
-    "💫 Cada segundo junto a ti es mi regalo más preciado, Guadalupe.",
-    "🌸 Eres el sueño más hermoso hecho realidad en mi vida."
+    "✨ ¡Guardaré este hermoso recuerdo para siempre en mi corazón, Guadalupe!",
+    "🌻 Contigo mi vida siempre es hermosa y radiante, Guadalupe.",
+    "💛 Mi lugar favorito en todo el universo siempre será a tu lado.",
+    "🌟 Tu sonrisa en este recuerdo ilumina mi mundo entero, Guadalupe.",
+    "💫 Cada segundo a tu lado es un regalo maravilloso.",
+    "🌸 Eres el sueño más hermoso hecho realidad en mi vida, Guadalupe."
 ];
 
 let activeToastTimer = null;
 
-function spinAndShowMessage(cardElem, msgIndex, event) {
-    const planetElem = cardElem.querySelector('.flower-planet');
+function revealMemory(cardElem, msgIndex, event) {
+    const flipContainer = cardElem.querySelector('.card-flip-container');
+    const badge = cardElem.querySelector('.status-badge');
 
-    // Disparar giro 3D
-    planetElem.classList.remove('spin-orbit');
-    void planetElem.offsetWidth;
-    planetElem.classList.add('spin-orbit');
+    // Alternar la clase 3D de apertura
+    const isOpened = flipContainer.classList.toggle('is-flipped');
 
-    // Explosión de flores y corazones en el punto del toque/clic
+    if (badge) {
+        badge.innerText = isOpened ? "Recuerdo abierto ✨" : "Toca para abrir";
+    }
+
+    // Explosión de flores y corazones en las coordenadas del toque/clic
     const x = event ? event.clientX : window.innerWidth / 2;
     const y = event ? event.clientY : window.innerHeight / 2;
-    createBurstAt(x, y, 40);
+    createBurstAt(x, y, 45);
 
-    // Mostrar mensaje flotante
+    // Mostrar el mensaje flotante de amor
     const toast = document.getElementById('loveToast');
     const toastMsg = document.getElementById('loveToastMessage');
 
@@ -143,5 +145,5 @@ function spinAndShowMessage(cardElem, msgIndex, event) {
 function triggerLoveShower(event) {
     const x = event ? event.clientX : window.innerWidth / 2;
     const y = event ? event.clientY : window.innerHeight / 2;
-    createBurstAt(x, y, 70);
+    createBurstAt(x, y, 75);
 }
